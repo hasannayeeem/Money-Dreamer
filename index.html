@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Dremer</title>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/84c6db8597.js" crossorigin="anonymous"></script>
+    <!-- bootstrap stylesheet -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="text-center text-color fw-bolder text-shadow py-3">Money Dremer</h1>
+    </header>
+    <main class="container">
+        <div class="row  d-flex p-5 align-items-center">
+            <div class="col-lg-7">
+                <img src="images/money.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-lg-5 bg-gray">
+                <div>
+                    <h3 class="text-center fw-bolder">Income</h3>
+                    <p class="text-center"><span>Income:</span><input id="total-income-with-cost" type="text"></p>
+                    
+                </div>
+                <div>
+                    <h3 class="text-center fw-bolder">Expeness</h3>
+                    <p class="text-center"><span>Food:</span><input id="food-cost" type="text"></p>
+                    <p class="text-center"><span>Rent:</span><input id="rent-cost" type="text"></p>
+                    <p class="text-center"><span>Clothes:</span><input id="clothes-cost" type="text"></p>
+                </div>
+              <button id="calculate-total" class="btn d-block text-white mx-auto btn-own">Calculate</button>
+              <h3 class="text-center fw-bolder">Total Expeness: <span id="total-exp">00</span> </h3>
+              <h3 class="text-center fw-bolder">Balance: <span id="total-balance">00</span></h3>
+              <div class="d-flex">
+                  <p><span>save:</span><input type="text">%</p>
+                  <button class="text-white py-1 px-3 border-0 btn-own">Save</button>
+              </div>
+              <h3 class="text-center fw-bolder">Saving Amount: <span>2500</span> </h3>
+              <h3 class="text-center fw-bolder">Remaining Balance: <span>2500</span> </h3>
+              <div>
+
+              </div>
+            </div>
+            
+          </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
