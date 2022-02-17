@@ -16,37 +16,35 @@
     <header>
         <h1 class="text-center text-color fw-bolder text-shadow py-3">Money Dremer</h1>
     </header>
-    <main class="container">
-        <div class="row  d-flex p-5 align-items-center">
+    <main class="container pb-5">
+        <div class="row  d-flex justify-content-between align-items-center">
             <div class="col-lg-7">
-                <img src="images/money.jpg" class="d-block w-100" alt="...">
+                <img src="images/money.jpg" width="610px" height="800px" class="d-block img-fluid" alt="...">
             </div>
-            <div class="col-lg-5 bg-gray">
+            <div class="col-lg-5 py-4 bg-gray">
                 <div>
-                    <h3 class="text-center fw-bolder">Income</h3>
-                    <p class="text-center"><span>Income:</span><input id="total-income-with-cost" type="text"></p>
+                    <h3 class="text-center fw-bolder py-2">Income</h3>
+                    <p class="text-center"><span class="me-2">Income:</span><input id="total-income-with-cost" type="text"></p>
                     
                 </div>
                 <div>
-                    <h3 class="text-center fw-bolder">Expeness</h3>
-                    <p class="text-center"><span>Food:</span><input id="food-cost" type="text"></p>
-                    <p class="text-center"><span>Rent:</span><input id="rent-cost" type="text"></p>
-                    <p class="text-center"><span>Clothes:</span><input id="clothes-cost" type="text"></p>
+                    <h3 class="text-center fw-bolder py-2">Expeness</h3>
+                    <p class="text-center ms-4"><span>Food:</span><input class="ms-2" id="food-cost" type="text"></p>
+                    <p class="text-center ms-4"><span>Rent:</span><input class="ms-2" id="rent-cost" type="text"></p>
+                    <p class="text-center"><span class="me-2">Clothes:</span><input id="clothes-cost" type="text"></p>
                 </div>
-              <button id="calculate-total" class="btn d-block text-white mx-auto btn-own">Calculate</button>
-              <h3 class="text-center fw-bolder">Total Expeness: <span id="total-exp">00</span> </h3>
-              <h3 class="text-center fw-bolder">Balance: <span id="total-balance">00</span></h3>
+              <button id="calculate-total" class="btn d-block text-white mx-auto btn-own px-4 fw-bolder">Calculate</button>
+              <h3 class="text-center fw-bolder py-2 mt-2">Total Expeness: <span id="total-exp">00</span> </h3>
+              <h3 class="text-center fw-bolder py-2">Balance: <span id="total-balance">00</span></h3>
               <div class="d-flex">
-                  <p><span>save:</span><input type="text">%</p>
-                  <button class="text-white py-1 px-3 border-0 btn-own">Save</button>
+                  <p class="mx-auto"><span class="me-2">save:</span><input id="just-save-no-cost" class="savebtn" type="text"><strong class="ps-4">%</strong></p>
+                  <button id="save-btn" class="text-white me-5 border-0 btn-own savebtn">Save</button>
               </div>
-              <h3 class="text-center fw-bolder">Saving Amount: <span>2500</span> </h3>
-              <h3 class="text-center fw-bolder">Remaining Balance: <span>2500</span> </h3>
+              <h3 class="text-center fw-bolder py-2">Saving Amount: <span id="saving-amount">00</span> </h3>
+              <h3 class="text-center fw-bolder py-2">Remaining Balance: <span id="remaining-amount">00</span> </h3>
               <div>
-
               </div>
-            </div>
-            
+            </div>  
           </div>
     </main>
     <footer>
