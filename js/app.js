@@ -1,8 +1,12 @@
 function getInputValue(expeness){
     const expenessCost = document.getElementById(expeness + '-cost');
     const expenessPerCost = parseInt(expenessCost.value);
-    // console.log(expenessPerCost);
-    return expenessPerCost;
+    if(expenessCost.value == ''){
+        alert(7)
+    }
+    else{
+        return expenessPerCost;
+    }    
 }
 
 function calculateTotal(){
@@ -15,30 +19,27 @@ function calculateTotal(){
     const totalIncome = getInputValue('total-income-with');
     // calculate balance
     const totalBalance = totalIncome - expenessTotal;
-
-    
-    if(foodTotal == '' || rentTotal == '' || clothesTotal == ''){
-        console.log('v');
+    // error handle 
+    if(foodTotal == '' || typeof foodTotal != 'number' && rentTotal == '' || typeof rentTotal != 'number' &&  clothesTotal == '' || typeof clothesTotal != 'number'){
+        return alert('please fillup the input field')
     }
+    // else if(typeof foodTotal != 'number' || typeof rentTotal != 'number' || typeof clothesTotal != 'number'){
+    //     return alert('oops! please type a numeric number')
+    // }
     else{
-        // // update on the html 
-    // document.getElementById('total-exp').innerText = expenessTotal;
+    // update on the html 
+    document.getElementById('total-exp').innerText = expenessTotal;
     document.getElementById('total-balance').innerText = totalBalance;
-    }
-    // calculate saving amount
-    /* if(savingInput == '' && savingInput!= 'number'){
-        const savingAmount = totalIncome / savingInput;
-        document.getElementById('saving-amount').innerText = savingAmount;
-    } */
-    
-    
+    }    
 }
+
+
 function calculateSaving(){
     const totalIncome = getInputValue('total-income-with');
     // get saving input 
     const savingInput = getInputValue('just-save-no');
     //calculate saving amount
-    const savingAmount = totalIncome / savingInput;
+    const savingAmount = totalIncome * savingInput / 100;
     // calculate remaining amount 
     const foodTotal = getInputValue('food');
     const rentTotal = getInputValue('rent');
@@ -46,16 +47,22 @@ function calculateSaving(){
     const expenessTotal = foodTotal + rentTotal + clothesTotal;
     const totalBalance = totalIncome - expenessTotal;
     const remainingAmount = totalBalance - savingAmount;
-    
-    document.getElementById('saving-amount').innerText = savingAmount;
-    document.getElementById('remaining-amount').innerText = remainingAmount;
-    // clear input field 
-    
+    if(savingAmount > totalBalance){
+        alert('What you want to save is more than your balance')
+    }
+    else{
+        document.getElementById('saving-amount').innerText = parseInt(savingAmount);
+        document.getElementById('remaining-amount').innerText = parseInt(remainingAmount);
+    }  
 }
+
+
 // handle calculate button 
 document.getElementById('calculate-total').addEventListener('click', function(){
     calculateTotal();
 });
+
+
 // handle save button 
 document.getElementById('save-btn').addEventListener('click', function(){
     calculateSaving();
