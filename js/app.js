@@ -2,7 +2,7 @@ function getInputValue(expeness){
     const expenessCost = document.getElementById(expeness + '-cost');
     const expenessPerCost = parseInt(expenessCost.value);
     if(expenessCost.value == ''){
-        alert(7)
+        // alert(7)
     }
     else{
         return expenessPerCost;
@@ -30,7 +30,9 @@ function calculateTotal(){
     // update on the html 
     document.getElementById('total-exp').innerText = expenessTotal;
     document.getElementById('total-balance').innerText = totalBalance;
-    }    
+    }   
+    document.getElementById('total-exp').innerText = expenessTotal;
+    document.getElementById('total-balance').innerText = totalBalance; 
 }
 
 
