@@ -1,14 +1,15 @@
 function getInputValue(expeness){
     const expenessCost = document.getElementById(expeness + '-cost');
     const expenessPerCost = parseInt(expenessCost.value);
-    if(expenessCost.value == ''){
+    console.log(expenessCost);
+    if(expenessCost.value == '' || isNaN(expenessCost.value)){
         // alert(7)
     }
     else{
         return expenessPerCost;
     }    
 }
-
+// calculate totalexpeness and totalBalance
 function calculateTotal(){
     // calculate total cost 
     const foodTotal = getInputValue('food');
@@ -35,7 +36,7 @@ function calculateTotal(){
     document.getElementById('total-balance').innerText = totalBalance; 
 }
 
-
+// calculate savingAmount function
 function calculateSaving(){
     const totalIncome = getInputValue('total-income-with');
     // get saving input 
